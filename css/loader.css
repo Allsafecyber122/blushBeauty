@@ -26,6 +26,14 @@
     text-transform: uppercase;
 }
 
+/* Responsive adjustments for mobile */
+@media (max-width: 767.98px) {
+    #loader-text {
+        font-size: 1.5rem;
+        letter-spacing: 4px;
+    }
+}
+
 /* Hide the body content initially to prevent flash */
 body.loading {
     overflow: hidden;
