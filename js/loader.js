@@ -5,6 +5,12 @@ document.addEventListener("DOMContentLoaded", function() {
     // Counter removed - animation now runs on every reload as requested
     // sessionStorage check removed
 
+    // Safety fallback: Force enable scroll after 5 seconds if animation hangs
+    setTimeout(() => {
+        if (loader) loader.style.display = 'none';
+        document.body.classList.remove('loading');
+    }, 5000);
+
     // Register GSAP plugins
     gsap.registerPlugin(TextPlugin);
 
